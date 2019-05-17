@@ -1,0 +1,39 @@
+1.- Crear la clase CLIENTE con atributos (nombre, correo y clave), un método de instancia
+ToString() y un método de clase GuardarEnArchivo(Cliente).
+
+2.- Caso cargarCliente (POST): Recibe los siguientes datos: nombre, correo y clave, crea el
+objeto de tipo CLIENTE y lo guarda en el archivo “./clientes/clientesActuales.txt” (en un renglón
+distinto).
+
+3.- Caso validar (POST): Recibe el correo y clave, si coincide con algún registro de los cargados
+en el archivo de texto, retorna el mensaje "Cliente Logueado" (con el nombre del mismo), caso
+contrario, retorna "Cliente inexistente".
+
+4.- Caso cargarHelado(POST): Recibe un helado y lo guarda en ”heldaos/sabores.txt”.
+Guardar la foto en un subdirectorio "./heladosImagen/" con el nombre del helado punto hora
+minutos y segundos (Ejemplo: frutilla.102236.jpg).
+Crear la clase HELADO con atributos privados: sabor, precio y foto, que implemente la interface
+IVendible con el método PrecioMasIva().
+
+5.- Caso vender (GET): Recibe el sabor del helado y la cantidad. Si el sabor existe, retorna el
+precio total a pagar (con IVA incluido) y escribe en el archivo “helados/vendidos.txt” el sabor, la
+cantidad y el precio.
+Si no se encuentra el sabor, retorna un mensaje informando lo acontecido.
+
+7.- ListadoHelados (GET): Muestra una tabla con todos los helados. Mostrando el sabor, precio e
+imagen correspondiente.
+Crear un nuevo método estático en la clase HELADO, que retorne un array de objetos de tipo
+Helado (recuperados del archivo de texto).
+
+8.- Caso borrarHelados(GET): Si recibe un sabor por GET, retorna si el helado está en el archivo
+o no.
+Si lo recibe por POST, con el parámetro “caso” igual a "borrarHelado", se borra el helado del
+archivo y se mueve la foto al subdirectorio “./heladosBorrados/”, con el nombre formado por el
+sabor punto 'borrado' punto hora minutos y segundos del borrado (Ejemplo:
+frutilla.borrado.105905.jpg).
+
+9.- Caso modificarHelados.php: Recibe el sabor, precio y la foto de un Helado, si existe (buscar
+por sabor), se guardan los nuevos datos en el archivo de texto.
+La foto anterior se elimina del subdirectorio "./heladosImagen/" y se reemplaza por la nueva (con el
+nuevo nombre).
+Si no se encuentra el helado a ser modificado, informar por medio de un mensaje.
