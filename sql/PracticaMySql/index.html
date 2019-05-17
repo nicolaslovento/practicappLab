@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="manejador.js"></script>
+</head>
+<body>
+
+    <div id="div_mostrarOpciones" style="display: inline">
+        <input type="button" id="btnIngreso" value="Ingresar Persona" onclick="Opciones.MostrarIngreso()">
+        <input type="button" id="btnMostrarUno" value="Mostrar una persona" onclick="Opciones.MostrarUno()">
+        <input type="button" id="btnMostrarTodos" value="Mostrar todo" onclick="Opciones.MostrarTodos()">
+        <input type="button" id="btnBorrar" value="Borrar" onclick="Opciones.Borrar()">
+    </div>
+
+    <div id="div_mostrarIngreso" style="display: none"><br>
+        Nombre: <input type="text" name="nombre" id="nombre"><br>
+        Apellido: <input type="text" name="apellido" id="apellido"><br>
+        Edad: <input type="number" name="edad" id="edad"><br>
+        <input type="button" name="btnEnviar" value="Enviar" onclick="Persona.Ingresar()">
+    </div>
+        
+    <div id="div_MostrarIngresoId" style="display: none">
+        Ingrese ID: <input type="number" name="id" id="id">
+        <input type="button" name="btnEnviar" value="Enviar" onclick="Persona.MostrarUno()">
+    </div>
+
+    <div id="div_MostrarTodos" style="display:none"></div>
+
+    <div id="div_Borrar" style="display:none">
+
+        Ingrese ID a eliminar: <input type="number" name="idBorrar" id="idBorrar">
+        <input type="button" name="btnEnviar" value="Enviar" onclick="Persona.Borrar()">
+    
+    </div>
+    
+</body>
+</html>
